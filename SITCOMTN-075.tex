@@ -38,6 +38,17 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
   \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Keith Bechtol}
 }
 
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Units
+\newcommand{\unit}[1]{\ensuremath{\mathrm{\,#1}}\xspace}
+\newcommand{\visits}{\unit{visits}}
+\newcommand{\bands}{\unit{bands}}
+\newcommand{\pointings}{\unit{pointings}}
+\newcommand{\epochs}{\unit{epochs}}
 
 \begin{document}
 
@@ -48,6 +59,32 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
+
+\section{Introduction}
+
+\section{Sequence of on-sky commissioning activities}
+
+\section{Example Calibration Datasets}
+
+\section{On-sky Example Datasets}
+
+\subsection{AOS Commissioning In-Focus}
+
+\subsection{Exposure Time Scans}
+
+\subsection{Bright Star Scans}
+
+\subsection{Dense Dithered Star Field}
+
+\input{table_dense_dithered_star_field.tex}
+
+\subsection{Deep Drilling Field (DDF)}
+
+\subsection{Crowded Fields}
+
+\subsection{Science Validation Survey}
+
+\section{Mapping to System-level Science Performance Requirements}
 
 \appendix
 % Include all the relevant bib files.
