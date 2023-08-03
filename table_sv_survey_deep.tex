@@ -1,0 +1,57 @@
+\begin{table}[H]
+    \footnotesize
+    \begin{tabular}{ p{0.3\linewidth}  p{0.7\linewidth} }
+    \toprule
+    \textbf{Attribute} & \textbf{Notes} \\
+    \midrule
+    Primary Objectives & \tabitem Deep survey component is optimized for testing coadds at LSST 10-year survey full depth and beyond \\
+      & \tabitem Full rehearsal of nighttime and daytime operational procedures \\
+    \midrule
+    Additional Goals & \tabitem Dataset of high legacy value to inform ongoing Science Pipeline development and enable broad set of science validation investigations \\
+    \midrule
+    Prerequisites & \tabitem System First Light \\
+    \midrule
+    Total Visits & \tabitem First 30 days: $\sim11$ pointings $\times$ 825 visits per pointing = 9075 visits ($\sim15$ night equivalents) \\
+    \midrule
+    Overlapping Visits & \tabitem First 30 days: 825 visits at each pointing $(u, g, r, i, z, y) = (56, 80, 184, 184, 160, 160)$ (nominal LSST WFD 10-year integrated exposure) \\
+      & \tabitem Extension: increase depth to 1650 visits at each pointing $(u, g, r, i, z, y) = (112, 160, 368, 368, 320, 320)$ (equivalent to LSST WFD 20-year integrated exposure) \\
+    \midrule
+    Band Coverage & $ugrizy$ \\
+    \midrule
+    Area & \tabitem First 30 days: $\sim1100$ deg$^2$ \\
+    \midrule
+    Pointing / Sky Region & Single contiguous region overlapping one of the LSST DDF \\
+    \midrule
+    Visit / Exposure Time & Standard visit \\
+    \midrule
+    Dither Pattern & \tabitem Nominal LSST WFD dither pattern \\
+      & \tabitem Note that will probably need to observe the deep region with a variety of translational offsets and rotator angles to simulate the distribution that would be obtained in LSST survey. \\
+    \midrule
+    Cadence & Steadily build integrated exposure across the survey. \\
+      & During a 30 day period, each pointing would receive average of ~25 visits on each night. Due to lunar cycle, visits in reddest and bluest bands are likely to be more concentrated during bright and dark time, respectively. \\
+    \midrule
+    Time Baseline & Minimum 30 days. \\
+    \midrule
+    Delivered Image Quality & Expect a range similar to distribution in 10-year LSST survey as we sample a range of observing conditions. Anticipate ongoing system optimization. \\
+    \midrule
+    Airmass distribution & Observe same field in in three epochs to sample a range of airmass of 1.0, 1.4, 2.0 \\
+    \midrule
+    Environmental Conditions & Sample range of environmental conditions over a period of at least 30 days, including sky brightness (lunar cycle), seeing, atmosphere transparency, wind speed and direction, temperature \\
+    \midrule
+    Representative Dataset Types & DRP mode: \\
+      & \tabitem Source \\
+      & \tabitem Object \\
+      & \tabitem ForcedSource \\
+      & \tabitem DiaSource \\
+      & \tabitem DiaObject \\
+      & \tabitem DiaForcedSource \\
+      & AP mode: \\
+      & \tabitem DiaObject \\
+      & \tabitem DiaSource \\
+      & \tabitem DIAForcedSource \\
+      \midrule
+    Success Criteria & Collect data to verify full set of system-level science performance requirements at survey scale, with emphasis on characterizing systematics for deep coadds \\
+    \bottomrule
+    \end{tabular}
+    \caption{Science Validation Survey Deep component}
+  \end{table}

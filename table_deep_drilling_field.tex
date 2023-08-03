@@ -1,0 +1,56 @@
+\begin{table}[H]
+    \footnotesize
+    \begin{tabular}{ p{0.3\linewidth}  p{0.7\linewidth} }
+    \toprule
+    \textbf{Attribute} & \textbf{Notes} \\
+    \midrule
+    Primary Objectives & \tabitem Verify that scattered light and other artifacts can be mitigated with nominal LSST DDF dither strategy and acceptable masking \\
+    \midrule
+    Additional Goals & \tabitem Test building coadds $>100$ visits \\
+      & \tabitem Test DIA \\
+    \midrule
+    Prerequisites & \tabitem Acceptable image quality across full FoV at a particular airmass \\
+      & \tabitem Analysis of Bright Star Scans to  \\
+    \midrule
+    Total Visits & 120 \visits $\times$ 3 \epochs = 360 \visits \\
+    \midrule
+    Overlapping Visits & 200 visits \\
+    \midrule
+    Band Coverage & grizy \\
+    \midrule
+    Area & $\sim$10 deg$^2$ (single DDF) \\
+    \midrule
+    Pointing / Sky Region & One of the LSST Deep Drilling Fields \\
+    \midrule
+    Visit / Exposure Time & Standard visit \\
+    \midrule
+    Dither Pattern & Nominal LSST DDF dithering strategy. Note that will probably need to observe with a variety of transational offsets and rotator angles to simulate the distribution that would be obtained in LSST survey. \\
+    \midrule
+    Cadence & Repeated consecutive visits within an epoch. Alternate between bands. \\
+    \midrule
+    Time Baseline & Epochs on separate nights \\
+    \midrule
+    Delivered Image Quality & \tabitem 0.7 system contribution to PSF FWHM across the full FoV \\
+      & \tabitem 1.0 delivered PSF FWHM across the full FoV \\
+    \midrule
+    Airmass distribution & Sample nominal airmass range from LSST 10-year survey \\
+    \midrule
+    Environmental Conditions & \tabitem Photometric \\
+    \midrule
+    Representative Dataset Types & DRP mode: \\
+      & \tabitem Source \\
+      & \tabitem Object \\
+      & \tabitem ForcedSource \\
+      & \tabitem DiaSource \\
+      & \tabitem DiaObject \\
+      & \tabitem DiaForcedSource \\
+      & AP mode: \\
+      & \tabitem DiaObject \\
+      & \tabitem DiaSource \\
+      & \tabitem DIAForcedSource \\
+      \midrule
+    Success Criteria & Technical report to inform recommendation for initial DDF dither strategy at the start of LSST 10-year survey \\
+    \bottomrule
+    \end{tabular}
+    \caption{Deep Drilling Field}
+  \end{table}

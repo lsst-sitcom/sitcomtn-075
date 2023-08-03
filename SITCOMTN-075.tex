@@ -49,6 +49,7 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 \newcommand{\bands}{\unit{bands}}
 \newcommand{\pointings}{\unit{pointings}}
 \newcommand{\epochs}{\unit{epochs}}
+\newcommand{\degree}{\unit{deg}}
 
 \begin{document}
 
@@ -70,9 +71,15 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 
 \subsection{AOS Commissioning In-Focus}
 
+%\input{table_aos_commissioning_in-focus}
+
 \subsection{Exposure Time Scans}
 
+%\input{table_exposure_time_scans}
+
 \subsection{Bright Star Scans}
+
+%\input{table_bright_star_scans}
 
 \subsection{Dense Dithered Star Field}
 
@@ -80,9 +87,23 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 
 \subsection{Deep Drilling Field (DDF)}
 
+\input{table_deep_drilling_field.tex}
+
 \subsection{Crowded Fields}
 
-\subsection{Science Validation Survey}
+%\input{table_crowded_fields}
+
+\subsection{Science Validation Surveys}
+
+Plan to interleave survey components so that both survey components have observations on many distinct nights
+
+Option to emphasize deep component in case that there is processing time needed for template generation and/or infrastructure issues for AP that need to be worked
+
+There is probably some careful thinking to do with the optimization of the scheduler on whether to prioritize template building initially, or to prioritize getting some repeated visits in areas with templates to get an early look at DIA. I think based on discussions with AP team that prioritization of template building is preferred at the start. If there is uncertainty on the duration of the SV survey period, there will also be thinking to do on balance of adding area versus adding more repeated observations of fields with existing templates.
+
+\input{table_sv_survey_deep}
+
+\input{table_sv_survey_wide}
 
 \section{Mapping to System-level Science Performance Requirements}
 
