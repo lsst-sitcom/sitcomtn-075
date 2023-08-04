@@ -1,4 +1,4 @@
-\documentclass[SE,authoryear,toc]{lsstdoc}
+\documentclass[SE,authoryear,toc,lsstdraft]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -15,7 +15,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-Keith Bechtol
+System On-sky Test Plan Working Group: Yusra AlSayyad, Keith Bechtol (chair), Erik Dennihy, Patrick Ingraham, Scot Kleinman, Robert Lupton, Tiago Ribeiro, Eli Rykoff, Sandrine Thomas
 }
 
 \setDocRef{SITCOMTN-075}
@@ -63,23 +63,33 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 
 \section{Introduction}
 
+This work planning document supplements the Rubin Observatory Commissioning Plan \citedsp{LSE-79}, providing a more detailed narrative description for the sequence of on-sky and in-dome data acquisition, data processing, and verification campaigns during the period of LSSTCam on-sky commissioning, considering Active Optics System (AOS) commissioning, calibration systems, and Science Programs together.
+The objective is to provide sufficient detail to understand linkages between activities in the overall commissioning schedule and to empower the team to progress on specific work packages for each of the activities described, e.g., write observing scripts / scheduler configurations, plan data processing campaigns, develop science verification and validation analyses.
+We identify open questions for further study.
+Detailed work planning will be captured in other tools (e.g., P6 and Jira).
+
 \section{Sequence of on-sky commissioning activities}
 
-\section{Example Calibration Datasets}
+\section{Calibration Datasets}
+
+% See https://jira.lsstcorp.org/browse/DM-39997
+% SITCOMTN-086 Rubin Baseline Calibration Plan https://sitcomtn-086.lsst.io/
+% SITCOMTN-087 Calibration System Milestone Summary https://sitcomtn-087.lsst.io/
+
 
 \section{On-sky Example Datasets}
 
 \subsection{AOS Commissioning In-Focus}
 
-%\input{table_aos_commissioning_in-focus}
+\input{table_aos_infocus}
 
 \subsection{Exposure Time Scans}
 
-%\input{table_exposure_time_scans}
+\input{table_exposure_time_scans}
 
 \subsection{Bright Star Scans}
 
-%\input{table_bright_star_scans}
+\input{table_bright_star_scans}
 
 \subsection{Dense Dithered Star Field}
 
@@ -90,6 +100,11 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 \input{table_deep_drilling_field.tex}
 
 \subsection{Crowded Fields}
+
+%Questions:
+%\begin{itemize}
+%  \item Band coverage: is $u$ band critical?
+%\end{itemize}
 
 %\input{table_crowded_fields}
 

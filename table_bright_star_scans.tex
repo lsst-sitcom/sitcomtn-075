@@ -1,0 +1,53 @@
+\begin{table}[H]
+    \footnotesize
+    \begin{tabular}{ p{0.3\linewidth}  p{0.7\linewidth} }
+    \toprule
+    \textbf{Attribute} & \textbf{Notes} \\
+    \midrule
+    Primary Objectives & \tabitem Characterize ghosts and scattered light \\
+      & \tabitem Bright star profile / wings of the PSF \\
+      & \tabitem Robustness of single-frame processing to presence of bright star \\
+      & \tabitem Appropriate mask design for bright stars \\
+      & \tabitem Test ISR including, crosstalk, bleed trails \\
+    \midrule
+    Additional Goals &  \\
+    \midrule
+    Prerequisites & \tabitem LED flats have been acquired \\
+      & \tabitem Monochromatic flats have been acquired \\
+    \midrule
+    Total Visits & 4 fields \times 30 visits \times 6 bands = 720 visits \\
+    \midrule
+    Overlapping Visits & Single pointing, minimal dither \\
+    \midrule
+    Band Coverage & $(u)griz(y)$, prioritize $griz$ \\
+    \midrule
+    Area & $\sim10$ deg$^2$ around each pointing \\
+    \midrule
+    Pointing / Sky Region & Fields containing a star bright enough to compromise measurements on: \\
+      & \tabitem Amplifier \\
+      & \tabitem Detector \\
+      & \tabitem Raft \\
+      & \tabitem Significant fraction of focal plane \\
+    \midrule
+    Visit / Exposure Time & Standard visit \\
+    \midrule
+    Dither Pattern & Scan pointing across bright star so that the object appears at multiple locations on the focal plane as well as slightly outside the field of view.  \\
+    \midrule
+    Cadence & Not constrained, probably take observations of a given field together in a single epoch \\
+    \midrule
+    Time Baseline & Not constrained, probably take observations of a given field together in a single epoch \\
+    \midrule
+    Delivered Image Quality & Could begin with 2.0 arcsec delivered PSF FWHM across the full FoV \\
+    \midrule
+    Airmass distribution & Not constrained, $z < 1.4$ \\
+    \midrule
+    Environmental Conditions & \tabitem Photometric \\
+    \midrule
+    Representative Dataset Types & \tabitem DRP mode: Source, Object \\
+      & Need to build coadd images to inspect residual effects of scattered light and ghosts \\
+      \midrule
+    Success Criteria & \\
+    \bottomrule
+    \end{tabular}
+    \caption{Exposure Time Scans}
+  \end{table}
