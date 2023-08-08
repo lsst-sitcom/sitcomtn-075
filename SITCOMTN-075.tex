@@ -63,10 +63,150 @@ Plan for the sequence of on-sky and in-dome data acquisition, data processing, a
 
 \section{Introduction}
 
-This work planning document supplements the Rubin Observatory Commissioning Plan \citedsp{LSE-79}, providing a more detailed narrative description for the sequence of on-sky and in-dome data acquisition, data processing, and verification campaigns during the period of LSSTCam on-sky commissioning, considering Active Optics System (AOS) commissioning, calibration systems, and Science Programs together.
-The objective is to provide sufficient detail to understand linkages between activities in the overall commissioning schedule and to empower the team to progress on specific work packages for each of the activities described, e.g., write observing scripts / scheduler configurations, plan data processing campaigns, develop science verification and validation analyses.
-We identify open questions for further study.
-Detailed work planning will be captured in other tools (e.g., P6 and Jira).
+%This report is the primary deliverable of the System On-sky Test Plan Working Group that was assembled in mid-2023 with the charge
+
+%to develop a concrete schedule of activities for the period of LSSTCam on-sky commissioning.
+%to gather input from across the Project regarding data needs for on-sky commissioning of LSSTCam
+% with the goal developing a more detailed
+
+
+%bringing together ``bottom-up'' and ``top-down'' planning approaches
+%of synthesizing prior planning work and .
+
+
+%develop a more detailed narrative description for the expected sequence of on-sky and in-dome data acquisition, data processing, and verification campaigns during the period of LSSTCam on-sky commissioning, considering calibration systems, the active optics system (AOS), and science programs together.
+%The System On-sky Test Plan Working Group was charged to synthesize
+%practical experience processing large volumes of precursor data
+
+% a more co
+%At the current stage of the Construction Project,
+
+This work planning document builds off the Rubin Observatory Commissioning Plan \citedsp{LSE-79}, providing a more detailed narrative description for the expected sequence of on-sky and in-dome data acquisition, data processing, and verification campaigns during the period of LSSTCam on-sky commissioning, considering calibration systems, the active optics system (AOS), and science programs together.
+%This report is the primary deliverable of the System On-sky Test Plan Working Group that was assembled in mid-2023 to synthesize input on commissioning needs from across the Project.
+Planning was informed by the Construction Completeness and Operations Readiness criteria (SITCOMTN-005), practical experience from the commissioning of AuxTel, experience processing large volumes of precursor data with the LSST Science Pipelines, on-sky commissioning needs for the camera, AOS, and Science Pipelines, as well as suggested science validation opportunities shared by the science community (REFRENCE).
+The objective is to capture sufficient detail to understand linkages between activities in the overall commissioning schedule and guide progress on specific work packages for each of the activities described, e.g., to write observing scripts / scheduler configurations, prepare for data processing campaigns, and develop verification test plans and analyses.
+
+The overall strategy is to interleave engineering and science activities to make efficient use of on-sky commissioning time with the integrated system, and to maximize opportunities for iteration, allowing time for data analysis and ``thinking'' between cycles of data acquisition.
+We prioritize early tests that yield actionable information on the system performance.
+
+%A System On-Sky Test Plan working group was assembled in May 2023 to bring together
+%Bring together “bottom-up” and “top-down” planning approaches to begin developing a more concrete and actionable on-sky test plan:
+
+
+%At this stage, planning:
+As of July 2023, the current document represents a success-oriented skeleton test plan.
+%At this stage, the the goal deliverable is a success-oriented skeleton test plan
+In order to keep the current planning task tractable, we make a few simplifications:
+%We made a few simplications to keep the task tractable:
+
+\begin{itemize}
+
+  \item The plan is succes-oriented in the sense that we present a baseline rather than consider possible unexpeced issues that would motivate changing the order the activities
+
+  \item Initial focus on logical sequence of activities rather than duration / dates
+
+  \item Initial focus on datasets needed to understand the as-built system rather than details of implementation and scheduling
+
+  \item Group activities and associated example datasets according to system states when the data could first be collected in  useful / efficient way (logical flowchart to plan activities)
+
+\end{itemize}
+
+We identify open questions for further investigation.
+Detailed work planning will be captured with other tools (e.g., P6 and Jira).
+
+%Bring science performance tests as far forward in time as possible
+%Maximize opportunities for “thinking time” and iteration
+%Prioritize early tests that yield actional information on system performance
+%The activities are organized according
+
+\section{Data Processing Campaigns}
+
+%For context, we briefly describe the expected process for imaging data reduction during the on-sky commissioning period with LSSTCam.
+A large volume of data from the science sensors will be processed in the process of LSSTCam commissioning.
+The Campaign Management team is responsible for processing a set of agreed-on campaigns.
+For every campaign, there is a pilot and copilot from the CM team who are responsible for getting the data processed.
+Every campaign also has a small steering committee that can make decisions about what data to process, code versions, and timelines.
+
+During the commissioning, these campaigns fall into two broad categories:
+
+\begin{enumerate}
+
+  \item \textbf{New data}, slowly-varying code: how we learn more about observatory / camera / pipelines performance
+
+  \item \textbf{Constant data}, changing code: how we test and deploy new software changes
+
+\end{enumerate}
+
+The number of possible variables that go into planning a data processing campaign is large, including the relevant subset of observing data, science pipelines payload to run / data products to produce, and pipeline version.
+In general, we want to consolidate data reduction efforts into modest number of planned campaigns, due to limited time and effort, and because we expect to learn more by focusing our collective analysis efforts onto the same datasets.
+Importantly, a few multi-purpose campaigns means they get high priority, rather than many smaller campaigns.
+
+It will be important to label data that should not be included in normal-flow processing.
+
+Current ``routine'' campaigns planned by the operations campaign management team:
+
+\begin{itemize}
+
+  \item Rapid Analysis @ summit (realtime)
+
+  \item Prompt Processing @ USDF (realtime)
+
+  \item “Next Morning” DRP-like processing @ USDF
+
+  \begin{itemize}
+
+    \item As lightweight as an end-of-night report (single-frame processing) or as heavyweight as a full DRP
+
+    \item Need to combine visits for some metrics
+
+  \end{itemize}
+
+  \item Regular DRP processing of curated datasets @ USDF
+
+  \begin{itemize}
+
+    \item Process curated subsets at regular intervals with updated versions of Science Pipelines
+
+    \item ``Incremental'' DRP through coadd measurement
+
+    \item ``Cumulative'' DRP through coadd measurements
+
+  \end{itemize}
+
+\end{itemize}
+
+This structure is already being applied for AuxTel imaging surveys.
+
+Throughout the on-sky commissioning period, we expect to identify/fix emergent issues and implement methods that improve processing of on-sky data.
+In these situations, the DM construction-era workflow will continue to guide.
+We plan to identify an LSSTCam test dataset (analogous to the HSC RC2) that will become the standard for testing
+code changes prior to merging with the main branch.
+
+We anticipate the following campaign prioritization:
+
+\begin{enumerate}
+
+  \item Campaigns that affect decisions about physical observatory changes, or changes to data taking processes.
+
+  \begin{itemize}
+
+    \item  For example, ``Do we need to change camera parameter X'' -- highest priority, our goal is to get to configuration-stability ASAP.
+
+    \item Improving observing efficiency is something we can't ``get back'' later in software, but the pre-change data is still usable
+
+  \end{itemize}
+
+  \item ``Normal flow'', general-purpose campaigns
+
+  \begin{itemize}
+
+    \item The general-purpose processing supports a broad set of commissioning experiments and is thus assigned a high priority
+
+  \end{itemize}
+
+  \item Non-normal processing or special data subsets
+
+\end{enumerate}
 
 \section{Sequence of on-sky commissioning activities}
 
@@ -76,6 +216,79 @@ Detailed work planning will be captured in other tools (e.g., P6 and Jira).
 % SITCOMTN-086 Rubin Baseline Calibration Plan https://sitcomtn-086.lsst.io/
 % SITCOMTN-087 Calibration System Milestone Summary https://sitcomtn-087.lsst.io/
 
+The outline schedule of calibration activities is as follows:
+
+Calibration Screen + Structure Installed on Dome [prior to M1M3 install, date TBD]
+
+\begin{itemize}
+
+  \item Install Calibration hardware (laser, projector, CBP) [following cal screen installation, must be complete by M1M3 install; duration: 2 weeks]
+
+  \item Functional Testing of Calibration hardware [following cal hardware installation, must be complete by 1st photon; duration: 1 month]
+
+  \item Calibration of CBP [following cal hardware installation, must be complete by 1st photon; duration: 6 weeks]
+
+\end{itemize}
+
+Camera installed [June 2024 (?); SITCOM-123]
+
+\begin{itemize}
+
+  \item Install Reflector [following camera install; duration: 2 days]
+
+  \item Align system [following install reflector, must be complete by 1st photon; duration: 5 days]
+
+\end{itemize}
+
+First Photon [SITCOM-122]
+
+\begin{itemize}
+
+  \item LED Flats 1 (note: these will be taken nightly) [immediately following First Photon; duration: 1 night]
+
+  \item Monochromatic flats 1 (10 wavelengths per ugrizy+ filters) [following LED Flats 1; duration: 1 night]
+
+  \item CBP pointing testing (daytime possible) [following LED Flats 1; duration: 14 days ]
+
+  \item On-sky testing 1 (initial dense dithered start field and twilight) [following LED Flats 1, must be complete before On-sky testing 2 + 2 weeks; duration: 1 night]
+
+  \item On-sky testing 2 (test chromatic response of camera)[following On-sky testing 1, must be complete before First Light; duration: 1 night]
+
+  \item Static CBP 1 (must be dark) [following CBP pointing testing, must be complete before First Light; duration: 2 nights]
+
+  \item Monochromatic flats 2 (dark, full range, no filter priority) [following Monochromatic flats 1 +4 weeks, must be complete before System First Light; duration: 2 nights]
+
+\end{itemize}
+
+System First Light [LSST-1520]
+
+\begin{itemize}
+
+  \item LED flats 2 (note: these will be taken nightly) [following First light; duration: not sure this even needs to be in the
+schedule]
+
+  \item Static CBP 2 [following First Light, needs to be complete prior to ORR complete; duration: 6 nights]
+
+  \item Monochromatic flats 3 [following First Light, needs to be complete prior to ORR complete; duration: 3 nights]
+
+  \item On-sky testing 3 (used for final calib product) [following First Light; duration: 5 nights]
+
+  \item Development of calibration products and analysis [following LED flats 2, Static CBP 2, Monochromatic
+flats 3, On-sky testing 3, and needs to be complete prior to ORR complete; duration: 2 months]
+
+\end{itemize}
+
+ORR Complete: [SITCOM-130]
+
+\begin{itemize}
+
+  \item All calibration products delivered (milestone, same as ORR complete)
+
+\end{itemize}
+
+The TAXICAB (REFERENCE) will manage which calibration products are used as a standard for normal-flow processing.
+
+\section{AOS Commissioning}
 
 \section{On-sky Example Datasets}
 
@@ -92,6 +305,8 @@ Detailed work planning will be captured in other tools (e.g., P6 and Jira).
 \input{table_bright_star_scans}
 
 \subsection{Dense Dithered Star Field}
+
+We expect to run the Dense Dithered Star Field observations multiple times during the period between initial alignment and focus and System First Light, and that later epochs of the Dense Dithered Star Field observations will constitute the primary dataset for demonstrating achievement of the System First Light Milestone.
 
 \input{table_dense_dithered_star_field.tex}
 
@@ -110,11 +325,51 @@ Detailed work planning will be captured in other tools (e.g., P6 and Jira).
 
 \subsection{Science Validation Surveys}
 
-Plan to interleave survey components so that both survey components have observations on many distinct nights
+The science validation surveys will be undertaken as part of a period of sustained scheduler-driven on-sky observing at the conclusion of the commissioning period (minimum 30 nights).
+The science validation surveys will provide datasets for science verification and validation studies that are needed to demonstrate construction completeness, and also constitute a full rehearsal for the set of daytime and nighttime operational procedures.
 
-Option to emphasize deep component in case that there is processing time needed for template generation and/or infrastructure issues for AP that need to be worked
+When considering the design of the science validation surveys, the System On-sky Test Plan Working Group adopted a strategy of organizing observations during the limited time-window available into a small set of multi-purpose programs.
+The motivating factors for this approach included:
 
-There is probably some careful thinking to do with the optimization of the scheduler on whether to prioritize template building initially, or to prioritize getting some repeated visits in areas with templates to get an early look at DIA. I think based on discussions with AP team that prioritization of template building is preferred at the start. If there is uncertainty on the duration of the SV survey period, there will also be thinking to do on balance of adding area versus adding more repeated observations of fields with existing templates.
+\begin{itemize}
+
+  \item simplicity and team focus
+
+  \item scalability of the observing programs given schedule uncertainty
+
+  \item anticipating that system optimization might be ongoing and that delivered image quality will improve over time
+
+  \item mitigation of weather and engineering time losses (especially considering the lunar cycle)
+
+  \item providing longer time baseline for difference imaging tests by building templates early and regularly returning to same fields
+
+  \item enabling direct comparisons between data quality taken under different observing conditions and operational configuration, including advanced stages of AOS commissioning and environmental control
+
+  \item producing datasets with a combination of area, depth, band coverage, and temporal sampling to yield high legacy value, even after the start of the LSST 10-year survey
+
+\end{itemize}
+
+While providing wide-area template coverage is not a primary goal of the science validation surveys, we recognize that covering large regions of sky could enhance the scientific return of the Alert Stream during the first year of LSST (see DM technote on incremental template generation).
+
+After gathering input from across the Project and considering suggestions from the science community, we recommend a science validation survey strategy with
+
+\begin{enumerate}
+
+  \item a \textbf{deep} component optimized to test science performance at imaging depths equivalent to the 10-year LSST (and beyond), and
+
+  \item a \textbf{wide} component optimized to test Alert Production at an LSST survey scale (minimum 1000 deg$^2$).
+
+\end{enumerate}
+
+Plan to interleave these two survey components so that both programs have observations on many distinct nights to allow scheduling flexibility and sample a wide range of environmental conditions.
+We suggest to leave open the option to focus on one component or another on a night-by-night basis, e.g., to allow processing time needed for template generation for Alert Production.
+%and/or infrastructure issues for AP that need to be worked
+
+There is probably some careful thinking to do with the optimization of the scheduler on whether to prioritize template building initially, or to prioritize getting some repeated visits in areas with templates to get an early look at DIA.
+I think based on discussions with AP team that prioritization of template building is preferred at the start.
+If there is uncertainty on the duration of the SV survey period, there will also be thinking to do on balance of adding area versus adding more repeated observations of fields with existing templates.
+
+We recommend that nominal LSST twilight survey observations are included during the SV survey period.
 
 \input{table_sv_survey_deep}
 
