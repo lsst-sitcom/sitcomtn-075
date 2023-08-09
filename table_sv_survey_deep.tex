@@ -18,7 +18,7 @@
     \midrule
     Band Coverage & $ugrizy$ \\
     \midrule
-    Area & \tabitem First 30 days: $\sim1100$ deg$^2$ \\
+    Area & \tabitem First 30 days: $\sim100$ deg$^2$ \\
     \midrule
     Pointing / Sky Region & Single contiguous region overlapping one of the LSST DDF \\
     \midrule
@@ -27,28 +27,21 @@
     Dither Pattern & \tabitem Nominal LSST WFD dither pattern \\
       & \tabitem Note that will probably need to observe the deep region with a variety of translational offsets and rotator angles to simulate the distribution that would be obtained in LSST survey. \\
     \midrule
-    Cadence & Steadily build integrated exposure across the survey. \\
-      & During a 30 day period, each pointing would receive average of ~25 visits on each night. Due to lunar cycle, visits in reddest and bluest bands are likely to be more concentrated during bright and dark time, respectively. \\
+    Cadence & Steadily build integrated exposure during the survey. \\
+      & During a 30 day period, each pointing would receive average of $\sim25$ visits on each night. Due to lunar cycle, visits in reddest and bluest bands are likely to be more concentrated during bright and dark time, respectively. \\
     \midrule
     Time Baseline & Minimum 30 days. \\
     \midrule
     Delivered Image Quality & Expect a range similar to distribution in 10-year LSST survey as we sample a range of observing conditions. Anticipate ongoing system optimization. \\
     \midrule
-    Airmass distribution & Observe same field in in three epochs to sample a range of airmass of 1.0, 1.4, 2.0 \\
+    Airmass distribution & Span range of airmass from 1.0 < z < 2.0, concentrated in typical airmass range expected for LSST survey 1.0 < z < 1.4 \\
     \midrule
     Environmental Conditions & Sample range of environmental conditions over a period of at least 30 days, including sky brightness (lunar cycle), seeing, atmosphere transparency, wind speed and direction, temperature \\
     \midrule
     Representative Dataset Types & DRP mode: \\
-      & \tabitem Source \\
-      & \tabitem Object \\
-      & \tabitem ForcedSource \\
-      & \tabitem DiaSource \\
-      & \tabitem DiaObject \\
-      & \tabitem DiaForcedSource \\
+      & \tabitem Source, Object, ForcedSource, DiaSource, DiaObject, DiaForcedSource \\
       & AP mode: \\
-      & \tabitem DiaObject \\
-      & \tabitem DiaSource \\
-      & \tabitem DIAForcedSource \\
+      & \tabitem DiaObject, DiaSource, DIAForcedSource \\
       \midrule
     Success Criteria & Collect data to verify full set of system-level science performance requirements at survey scale, with emphasis on characterizing systematics for deep coadds \\
     \bottomrule

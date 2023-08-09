@@ -9,14 +9,14 @@
     \midrule
     Additional Goals & \tabitem Initial testing of building coaddition and difference imaging \\
     \midrule
-    Prerequisites & \tabitem White light flats have been acquired \\
-      & \tabitem Monochromatic flats have been acquired \\
+    Prerequisites & \tabitem LED flats have been acquired \\
+      & \tabitem Monochromatic flats have been acquired (iterations approaching System First Light) \\
     \midrule
-    Total Visits & 120 \visits $\times$ 3 \epochs = 360 \visits \\
+    Total Visits & 120 \visits $\times$ 6 \epochs = 720 \visits (8 hrs total; 6 epochs of 80 min each) \\
     \midrule
-    Overlapping Visits & 30 visits in each of griz during each epoch (comparable to single year of LSST WFD integrated exposure) \\
+    Overlapping Visits & 30 visits in each of ugri (dark time) or rizy (bright time) in each epoch; epochs span range of airmass; comparable to single year of LSST WFD integrated exposure \\
     \midrule
-    Band Coverage & griz \\
+    Band Coverage & ugrizy (4 bands in a given epoch is sufficient) \\
     \midrule
     Area & Central region of $\sim$10 deg$^2$ (focal plane dithers around a single central pointing) \\
     \midrule
@@ -28,24 +28,23 @@
     \midrule
     Cadence & Repeated visits within a single epoch. Alternate between filters within an epoch so that stars are observed in griz bands within a single epoch. \\
     \midrule
-    Time Baseline & $\sim$120 minutes within epoch, epochs on 3 consecutive nights \\
+    Time Baseline & $\sim$80 minutes within epoch; epochs can be on separate nights (close spacing preferred) \\
     \midrule
-    Delivered Image Quality & \tabitem 0.7 arcsec system contribution to PSF FWHM across the full FoV \\
+    Delivered Image Quality & Can begin when no strong gradients in PSF across FoV \\
+      & \tabitem 0.7 arcsec system contribution to PSF FWHM across the full FoV \\
       & \tabitem 1.0 arcsec delivered PSF FWHM across the full FoV \\
     \midrule
-    Airmass distribution & Observe same field in in three epochs to sample a range of airmass of 1.0, 1.4, 2.0 \\
+    Airmass distribution & Observe same field in in three epochs to sample a range of airmass: 1.0, 1.4, 2.0 \\
     \midrule
     Environmental Conditions & \tabitem Photometric \\
     \midrule
     Representative Dataset Types & DRP mode: \\
-      & \tabitem Source \\
-      & \tabitem Object \\
-      & \tabitem ForcedSource \\
-      & \tabitem DiaSource \\
-      & \tabitem DiaObject \\
-      & \tabitem DiaForcedSource \\
+      & \tabitem Source, Object, ForcedSource, DiaSource, DiaObject, DiaForcedSource \\
+      & AP mode: (could be replay) \\
+      & \tabitem DiaObject, DiaSource, DIAForcedSource \\
       \midrule
-    Success Criteria & \\
+    Success Criteria & \tabitem Verification of astrometric and photometric internal solution \\
+      & \tabitem Verification of acceptable image quality across full FoV across range of airmass as part of System First Light milestone \\
     \bottomrule
     \end{tabular}
     \caption{Dense Dithered Star Field}
